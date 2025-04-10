@@ -1,0 +1,27 @@
+Step 1:
+  Update Packages: sudo yum update (for Amazon Linux) or sudo apt update (for Ubuntu)
+
+Step 2:
+  Install Java: sudo yum install java-17-amazon-corretto -y (for Amazon Linux) or sudo apt install java-17-amazon-corretto -y(for Ubuntu)
+
+Step 3:
+  Add the Jenkins repo using the following command:
+    wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+Step 4:
+  Import a key file from Jenkins-CI to enable installation from the package:
+    rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+Step 5:
+  Install Jenkins using below command:
+    yum install jenkins -y
+
+Step 6:
+  Enable Jenkins:
+    systemctl enable jenkins
+
+Step 7:
+  Start Jenkins:
+    systemctl start jenkins
+
+Your Jenkins Server is Now up and running...........
