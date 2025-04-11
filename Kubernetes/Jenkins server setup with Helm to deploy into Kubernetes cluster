@@ -12,3 +12,12 @@ Step 3:
     mkdir /var/lib/jenkins/.kube
     copy config file under .kube directory with jenkins ownership by 
     chown jenkins:jenkins -r ./kube
+
+Optional Helm Stable Repo:
+
+  helm repo add stable https://charts.helm.sh/stable
+  helm repo search <chartname>
+  helm install repo stable/<chartname> <releasename>
+  helm pull <chartname>
+  helm package <chartname>
+  helm uninstall RELEASE_NAME
