@@ -21,3 +21,20 @@ Optional Helm Stable Repo:
   helm pull <chartname>
   helm package <chartname>
   helm uninstall RELEASE_NAME
+
+How to Pull chart and Version them for Deployment:
+
+Step 1: To add the Stable Repo 
+    helm repo add stable https://charts.helm.sh/stable
+
+Step 2: List Repo
+    helm repo list
+
+Step 3: Pull Chart's
+    helm pull stable/sql
+
+Step 4: Modify the Chart.yml update the Version if changes are made to and revert back
+    vi Chart.yaml 
+
+Step 5: Create a Package of Versioned Chart
+    helm package mysql
