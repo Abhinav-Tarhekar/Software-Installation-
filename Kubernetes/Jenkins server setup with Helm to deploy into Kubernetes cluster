@@ -1,0 +1,14 @@
+Step 1:
+  Download and Install helm:
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+Step 2:
+  Test with helm command:
+    helm version
+    helm list
+Step 3:
+  Copy config file from EKS Management host to Jenkins home directory
+    mkdir /var/lib/jenkins/.kube
+    copy config file under .kube directory with jenkins ownership by 
+    chown jenkins:jenkins -r ./kube
